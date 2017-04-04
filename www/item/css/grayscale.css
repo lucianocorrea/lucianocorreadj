@@ -1,0 +1,77 @@
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(./fonts/UnderAuthority.ttf);
+}
+
+.intro {
+  display: table;
+  width: 100%;
+  
+  
+  text-align: center;
+  color: white;
+  background: #000 url('../imgs/intro-bg.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.intro h1{
+	font-family:"UnderAuthority"!important; 
+	color:#fff;
+	font-size:2.4em;
+	
+}
+
+
+.intro .intro-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+.intro .intro-body .brand-heading {
+  font-size: 40px;
+font-family:"UnderAuthority"!important; 
+color:#fff;
+
+}
+.intro .intro-body .intro-text {
+  font-size: 18px;
+
+
+}
+@media (min-width: 768px) {
+  .intro {
+    height: 100%;
+    padding: 0;
+     background-size: cover;
+  }
+  .intro .intro-body .brand-heading {
+    font-size: 100px;
+  }
+  .intro .intro-body .intro-text {
+    font-size: 26px;
+  }
+}
+
+
+@media (max-width: 768px) {
+      
+	
+	.intro h1{
+		font-family:"UnderAuthority"!important; 
+		color:#fff;
+		font-size:1.2em;
+	
+	}
+	
+	.intro .intro-body .brand-heading {
+	  font-size: 1.2em;
+	font-family:"UnderAuthority"!important; 
+	color:#fff;
+
+	}
+	
+}

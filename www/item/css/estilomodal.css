@@ -1,0 +1,210 @@
+
+@font-face {
+    font-family: 'UnderAuthority';
+    src: url('../fonts/UnderAuthority.otf');
+}
+
+@font-face {
+    font-family: 'UnderAuthority';
+    src: url('../fonts/UnderAuthority.ttf');
+}
+
+img { max-width: 100%; }
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FFF;
+    z-index: 9999;
+    transition: all 0.7s ease-out;
+    -moz-transition: all 0.7s ease-out;
+    -webkit-transition: all 0.7s ease-out;
+}
+
+body[data-preloader=finalizado] #preloader {
+    bottom: 100%;
+    transition: all 1.5s ease-out;
+    -moz-transition: all 1.5s ease-out;
+    -webkit-transition: all 1.5s ease-out;
+}
+
+#preloader:before {
+    content: '';
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    text-align: center;
+    background: transparent url('../img/logo.jpg') no-repeat center center;
+    width: 250px;
+    height: 100px;
+    transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+}
+
+body[data-preloader=iniciado] #preloader:before {
+    opacity: 1;
+    transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    animation-name: fadeIn;
+    -moz-animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+    animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+body[data-preloader=finalizado] #preloader:before {
+    transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+
+
+body[data-preloader=finalizado] #preloader[data-reverse=true] {
+    bottom: 0;
+    transition: bottom 1.5s ease-out;
+    -moz-transition: bottom 1.5s ease-out;
+    -webkit-transition: bottom 1.5s ease-out;
+}
+
+.img-left { 
+    float: left;
+    margin: 10px;
+}
+
+.modal-content {
+    border: 2px solid #FFF !important;
+}
+
+.modal-body{	
+	background:#000;
+	color: #fff;
+	text-align:left;
+	
+}
+
+.modal-content { 
+	background:#000;
+	color: #fff; 
+	text-align:right;
+}
+
+
+
+.modal .modal-header {
+	font-family:"UnderAuthority"; 
+	font-size:1.8em;
+    position: relative;
+    background-color:#000;
+    color:#fff;
+} 
+
+.modal .modal-header .close {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    margin: 0;
+    color:#fff;
+}
+
+.modal .modal-header .modal-title { 
+    font-family: 'UnderAuthority';
+    font-weight: 400;
+    color: #fff;
+    line-height: 29px;
+    margin-bottom: 10px;
+    font-size:40px;
+}
+
+.modal-equipe .modal-footer {
+    background-color: #000;
+    display: block;
+    border-top: 1px solid #FFF;
+    padding: 15px;
+}
+
+.modal-equipe .modal-footer .btn-close-outline {
+    margin-bottom: -2px;
+    background-color: transparent;
+    color: #FFF;
+    border-color: #FFF;
+}
+
+.modal-equipe .modal-footer .btn-close-outline:hover {
+    background-color: #FFF;
+    border-color: transparent;
+    color: #272A30;
+}
+
+
+/* Fancybox */
+.fancybox-skin {
+    background-color: #272A30;
+    border: 8px solid #FFF;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+
+.fancybox-title.fancybox-title-float-wrap {
+    bottom: 50px;
+}
+
+.fancybox-title.fancybox-title-float-wrap > span {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #272A30;
+    text-shadow: none;
+    -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.35);
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.35);
+}
+
+
+.fancybox-title.fancybox-title-inside-wrap {
+    background-color: #FFF;
+    color: #272A30;
+    margin: 2px -2px -2px -2px;
+    padding: 10px 5px 5px 5px;
+}
+
+.fancybox-inner .fancybox-image {
+    padding: 2px;
+    background-color: #000;
+}
+
+
+@media (max-width: 768px) {
+	
+	.modal p{
+		font-size:13px;
+	}
+	
+	.modal .modal-header .modal-title { 
+	    font-family: 'UnderAuthority';
+	    font-weight: 400;
+	    color: #fff;
+	    line-height: 29px;
+	    margin-bottom: 10px;
+	    font-size:20px;
+	}
+	
+	
+}

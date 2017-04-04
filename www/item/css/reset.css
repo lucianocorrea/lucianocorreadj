@@ -1,0 +1,76 @@
+/* ====================================
+	@ Reset CSS
+======================================= */
+
+* {
+ 	margin: 0;
+ 	padding: 0;
+ 	box-sizing: border-box;
+ 	-moz-box-sizing: border-box;
+ 	-webkit-box-sizing: border-box;
+}
+
+html,body {
+ 	height: 100%;
+}
+
+a, a:link, a:focus {
+ 	color: #ffffff;
+ 	text-decoration: none;
+ 	word-break: break-word;
+}
+
+a:visited {
+ 	color: #ffffff;
+ 	text-decoration: none;
+}
+
+a:hover {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+a img, img {
+	border: 0;
+	max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', cursive;
+    font-weight: 400;
+}
+
+h1 { font-size: 3em;   }
+h2 { font-size: 2.8em; }
+h3 { font-size: 2.4em; }
+h4 { font-size: 2em;   }
+h5 { font-size: 1.8em; }
+h6 { font-size: 1.4em;   }
+
+header, section, article, footer,
+figure, img, a, input, textarea, form,
+main, aside, nav, .relative {
+	position: relative;
+}
+
+figure, video {
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+	margin: 0;
+}
+
+input, textarea, select, button {
+	outline: 0;
+	resize: none;
+}
+
+.clearfix:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+iframe {
+    border: 0;
+}

@@ -1,0 +1,218 @@
+
+/* Preloader */
+div#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 9999;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+div#preloader[data-status=finish] {
+	left: 100%;
+}
+
+div#preloader:before {	
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+div#preloader[data-status=init]:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: transparent url('../img/plogo.png') no-repeat center center;
+    width: 250px;
+    height: 250px
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    -webkit-animation-duration: 3s;
+    -moz-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-name: flash;
+    -moz-animation-name: flash;
+    animation-name: flash;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+div#preloader[data-status=finish]:before  {
+	opacity: 0;
+}
+
+
+#intro {
+	position: relative;
+}
+
+#intro .cd-hero {	
+    overflow: hidden;
+}
+
+#intro .cd-hero-slider{
+	margin: 0;
+}
+
+#intro .cd-hero-slider .centro {
+	font-family: 'opensansbold';
+    font-weight: normal;
+}
+
+.nav-custom {
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 80;
+    padding: 10px;
+    -webkit-transition: all 0.7s ease-out;
+    -moz-transition: all 0.7s ease-out;
+    transition: all 0.7s ease-out;
+}
+
+@keyframes  entrar {
+	0% { top: -100px; }
+	100% { top: 0; }
+}
+
+@-moz-keyframes entrar {
+	0% { top: -100px; }
+	100% { top: 0; }
+}
+
+@-webkit-keyframes entrar {
+	0% { top: -100px; }
+	100% { top: 0; }
+}
+
+.nav-custom[data-navfix=true] {
+	position: fixed;
+	top: 0;
+	animation: entrar 1s;
+	-moz-animation: entrar 1s;
+    -webkit-animation: entrar 1s;
+	bottom: initial;
+}
+
+
+
+.nav-mobile, .nav-mobile:focus, .nav-mobile:hover {
+	display: block;
+	color: #FFF;
+	text-decoration: none;
+}
+
+div#nav-menu > ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+@media (max-width: 991px) {
+	
+	.nav-custom {
+		top: 0;
+		height: 50px;
+		background-color: rgba(252, 220, 75, 1);
+	}
+
+	div#nav-menu {
+	    background-color: rgba(252, 220, 75, 1);
+	    margin: 10px -10px 0 -10px;
+	    padding: 0;
+	}
+
+	.nav-url {		
+	    display: block;
+	    border-top: 1px solid rgba(0, 0, 0, 0.15);
+	    padding: 12px 15px;
+	    color: #FFF;
+	    text-decoration: none;
+	    font-size: 1.5em;
+	}
+
+	.nav-url:hover {		
+	    color: #FFF;
+	    text-decoration: none;
+	}
+
+	.nav-brand {
+		display: none !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.nav-custom {
+		bottom: 0;
+		text-align: center;
+	}
+
+	.nav-custom[data-bg=clara]:not(:hover) {
+	    background-color: rgba(255, 255, 255, 0.75);
+	}
+
+	.nav-custom[data-bg=clara]:not(:hover) #nav-menu ul li > a.nav-url {
+	    color: rgba(0, 0, 0, 0.5);
+	}
+
+    .nav-custom[data-bg=preto],
+    .nav-custom:hover {
+        background-color: rgba(0, 0, 0, 0.95);
+    }
+
+	.nav-mobile {
+		display: none;
+	}
+
+	#nav-menu > ul > li {
+		display: inline-block;
+		margin: 0 20px;
+	}
+
+	#nav-menu > ul > li:hover > a {
+		opacity: 0.6;
+	}
+
+	#nav-menu > ul > li > a.nav-url {
+		font-size: 1.3em;
+		font-family: 'open_sansbold';
+		font-weight: normal;
+		color: #FFF;
+		text-decoration: none;
+	}
+
+	.nav-brand {
+		margin: 0 10px;
+	}
+
+
+	.dropdown .dropdown-center {
+	    top: calc(100% + 10px);
+	    left: 50%;
+	    -webkit-transform: translateX(-50%);
+	    -moz-transform: translateX(-50%);
+	    transform: translateX(-50%);
+	    background-color: rgb(255, 255, 255);
+	}
+
+	.dropdown .dropdown-center a {
+	    color: #000;
+	    padding: 15px 20px;
+	    border-bottom: 1px solid rgba(0,0,0,0.15);
+	}
+
+	.dropdown .dropdown-center li:last-child a {
+		border-bottom: 0;
+	}
+}
